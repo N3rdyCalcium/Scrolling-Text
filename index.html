@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+  <head>
+    <title>Scrolling Text</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>SCROLLING TEXT [BETA]</h1>
+    <h4>This is a scrolling text app. Users can input some custom text and display it in a scrolling LED text style using JavaScript to input and output user data.</h4>
+    
+    Type a message to be shown on large scrolling text:
+    <input type="text" id="text" placeholder="Message" />
+    <button onclick="scrollingText()" type="submit" id="button">Done</button>
+    <button onclick="refresh()" type="reset" id="reset">Reset</button> 
+<br><br><br>
+    <div class="animated-box" id="visible" style="display: none;">
+      <marquee direction="left" behavior="scroll" scrollamount="50" id="message"></marquee>
+    </div>
+    <script>
+        function scrollingText() {
+            const text = document.getElementById('text').value;
+            const messageElement = document.getElementById('message');
+            const visible = document.getElementById('visible');
+            const fullscreen = document.getElementById("fullscreen");
+
+            messageElement.textContent = text;
+            visible.innerHTML = `<marquee direction="left" behavior="scroll" scrollamount="50">${text}</marquee>`;
+            visible.style.display = "block";
+        }
+        // detect Enter key on input
+        document.getElementById("text").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+          event.preventDefault(); // stop form submit/refresh
+          document.getElementById("button").click(); // trigger button click
+        }
+        });
+
+        function refresh() {
+          location.reload();
+        }
+    </script>
+    <a href="php/">PHP version</a>
+    <footer>
+      <p style="font-family: monospace;">
+        Made by Calvin Tanuri
+      <br>
+      Instagram: <a href="https://instagram.com/cakbtanuri" target="_blank">@cakbtanuri</a>
+      </p>
+    </footer>
+  </body>
+</html>
