@@ -15,7 +15,7 @@ marquee {
   position: relative;
   height: 100vh;
   color: red;
-  font-size: 100vmin;
+  font-size: 80vmin;
   line-height: 1.5;
   display: flex;
   justify-content: center;
