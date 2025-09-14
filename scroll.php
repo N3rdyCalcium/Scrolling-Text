@@ -11,7 +11,11 @@
         <button onclick="enterFullscreen()" id="fsBtn" style="align-items: right;">Fullscreen</button>
         <script>
             function enterFullscreen() {
-                document.documentElement.requestFullscreen();
+                if (!document.fullscreenElement) {
+                    document.documentElement.requestFullscreen();
+                } else {
+                    document.exitFullscreen();
+                }
             }
         </script>
     </body>
