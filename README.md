@@ -8,5 +8,3 @@ View full by pressing `View full page` and show it on screen!
 Go to [the website](https://pro70crazy.wuaze.com/HTMLtest/scrolling_text/) to try it out.
 # Notes
 This is an **ALPHA** (**BETA** in the website). There might be additional features soon.
-## Issues
-Fullscreen API won't work unless DevTools were open. Might be browser issue
