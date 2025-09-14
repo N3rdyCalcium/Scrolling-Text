@@ -1,11 +1,17 @@
 function scrollingText() {
     const text = document.getElementById('text').value;
     const messageElement = document.getElementById('message');
+    const hiddenInput = document.getElementById('hiddenMessage')
     const visible = document.getElementById('visible');
-    const fullscreen = document.getElementById("fullscreen");
 
     messageElement.textContent = text;
-    visible.innerHTML = `<marquee direction="left" behavior="scroll" scrollamount="50">${text}</marquee>`;
+
+      // clone the marquee to restart animation
+    const newMarquee = messageElement.cloneNode(true);
+    newMarquee.textContent = text;
+    messageElement.parentNode.replaceChild(newMarquee, messageElement);
+
+    hiddenInput.value = text;
     visible.style.display = "block";
 }
 
