@@ -6,15 +6,20 @@
   <body>
     <h1>SCROLLING TEXT [BETA]</h1>
     <h4>This is a scrolling text app. Users can input some custom text and display it in a scrolling LED text style using JavaScript to input and output user data.</h4>
-    
-    Type a message to be shown on large scrolling text:
-    <input type="text" id="text" placeholder="Message" />
-    <button onclick="scrollingText()" type="submit" id="button">Done</button>
-    <button onclick="refresh()" type="reset" id="reset">Reset</button> 
+      Type a message to be shown on large scrolling text:
+      <input type="text" id="text" name="text" placeholder="Message">
+      <button onclick="scrollingText()" id="button">Preview</button>
+      <button onclick="refresh()" type="reset" id="reset">Reset</button> 
 <br><br><br>
-    <div class="animated-box" id="visible" style="display: none;">
-      <marquee direction="left" behavior="scroll" scrollamount="50" id="message"></marquee>
-    </div>
+      <div id="visible" style="display: none;">
+        <div class="animated-box">
+          <marquee direction="left" behavior="scroll" scrollamount="50" id="message"></marquee>
+        </div>
+      <form action="scroll.php" method="GET">
+        <input type="hidden" id="hiddenMessage" name="message">    
+      <button type="submit">View full page</button>
+      </div>
+    </form>
     <script src="script.js"></script>
     <footer style="font-family: monospace;">
       <a href="https://github.com/N3rdyCalcium/Scrolling-Text/">Source code</a>
