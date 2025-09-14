@@ -26,3 +26,13 @@ if (event.key === "Enter") {
 function refresh() {
   location.reload();
 }
+
+function enterFullscreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+    fsBtn.innerText = "Exit Fullscreen";
+  } else {
+    document.exitFullscreen();
+    fsBtn.innerText = "Fullscreen";
+  }
+}
