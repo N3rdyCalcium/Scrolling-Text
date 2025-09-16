@@ -6,7 +6,7 @@
     </head>
     <body>
         <div class="animated-box">
-            <marquee direction="left" behavior="scroll" scrollamount="100"><?php echo $_REQUEST["message"] ?></marquee>
+            <marquee direction="left" behavior="scroll" scrollamount="100"><?php echo $_REQUEST["msg"] ?></marquee>
         </div>
         <br><br><br><br><br><br><br>
         <button id="fsBtn" style="align-items: right;">Fullscreen</button>
