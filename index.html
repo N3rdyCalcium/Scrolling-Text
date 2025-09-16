@@ -15,11 +15,13 @@
         <div class="animated-box">
           <marquee direction="left" behavior="scroll" scrollamount="50" id="message"></marquee>
         </div>
-      <form action="scroll.php" method="GET">
-        <input type="hidden" id="hiddenMessage" name="message">    
-        <button type="submit">View full page</button>
+        <form action="scroll.php" method="GET">
+          <input type="hidden" id="hiddenMessage" name="message">    
+          <button type="submit">View full page</button>
+        </form>
+        <input type="text" id="shareLink" readonly>
+        <button onclick="copyLink()" id="string">Copy Link</button>
       </div>
-    </form>
     <script src="script.js"></script>
     <br><br>
     <footer style="font-family: monospace;">
