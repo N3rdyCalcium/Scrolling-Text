@@ -13,7 +13,7 @@ function scrollingText() {
     messageElement.parentNode.replaceChild(newMarquee, messageElement);
 
     hiddenInput.value = text;
-    shareLink.value = "https://pro70crazy.wuaze.com/HTMLtest/scrolling_text/scroll.php?message=" + encodeURIComponent(text).replace(/%20/g, "+");
+    shareLink.value = "https://pro70crazy.wuaze.com/HTMLtest/scrolling_text/scroll.php?msg=" + encodeURIComponent(text).replace(/%20/g, "+");
     visible.style.display = "block";
 }
 
