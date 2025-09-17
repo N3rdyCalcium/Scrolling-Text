@@ -9,6 +9,10 @@ marquee {
   font-size: 120px;
 }
 
+button {
+  cursor: pointer;
+}
+
 .animated-box {
   position: relative;
   height: 150px;       /* fixed height */
