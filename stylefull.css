@@ -11,6 +11,10 @@ marquee {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
+
 .animated-box {
   position: relative;
   height: 100vh;
